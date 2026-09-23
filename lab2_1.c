@@ -1,12 +1,12 @@
 #include
-long long factorial(int n) {
-long long result = 1;
+int sum_to_n(int n) {
+int sum = 0;
 
 for (int i = 1; i <= n; i++) {
-result *= i;
+sum += i;
 }
 
-return result;
+return sum;
 }
 
 int main(void) {
@@ -15,10 +15,10 @@ int n;
 printf("Enter n: ");
 scanf("%d", &n);
 
-if (n < 0) {
-printf("Error: n must be non-negative.\n");
+if (n < 1) {
+printf("Error: n must be at least 1.\n");
 } else {
-printf("Factorial = %lld\n", factorial(n));
+printf("Sum = %d\n", sum_to_n(n));
 }
 
 return 0;
